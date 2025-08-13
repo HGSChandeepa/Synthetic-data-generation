@@ -1,0 +1,14 @@
+names:
+- '1'
+- '2'
+- '3'
+- '4'
+- '5'
+- '6'
+- '7'
+- '8'
+- '9'
+- '10'
+nc: 10
+train: F:\Company\GeekLabs\Retail AI\image_combine\dataset\images
+val: F:\Company\GeekLabs\Retail AI\image_combine\dataset\images
