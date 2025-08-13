@@ -1,6 +1,8 @@
 .venv
 
-backgrounds
-products
+backgrounds/*
+!backgrounds/.gitkeep
+products/*
+!products/.gitkeep
 dataset/images
 visualization
