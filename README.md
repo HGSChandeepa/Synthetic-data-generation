@@ -55,13 +55,28 @@ This tool is designed to solve a critical challenge in computer vision developme
 git clone https://github.com/HGSChandeepa/Synthetic-data-generation.git
 ```
 
-2. Install required dependencies:
+2. Create and activate a virtual environment (optional but recommended):
+
+```bash
+python -m venv .venv
+
+# Activate (each new terminal)
+# macOS/Linux:
+source .venv/bin/activate
+# Windows CMD:
+.venv\Scripts\activate.bat
+# Windows PowerShell:
+.venv\Scripts\Activate.ps1
+
+```
+
+1. Install required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Prepare your data structure:
+4. Prepare your data structure:
    - Place background images in the `backgrounds/` folder
    - Place product images in their respective numbered folders under `products/`
    - Ensure your dataset configuration is set in `dataset/data.yaml`
