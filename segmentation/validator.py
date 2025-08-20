@@ -4,13 +4,13 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import glob
 import yaml
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import json
 from collections import defaultdict, Counter
 import random
 
 # Configuration
-DATASET_DIR = "dataset"
+DATASET_DIR = "F:\Company\GeekLabs\Retail AI\image_combine\segmentation\seg_out"
 IMAGES_DIR = os.path.join(DATASET_DIR, "images")
 LABELS_DIR = os.path.join(DATASET_DIR, "labels")
 OUTPUT_DIR = "validation_output"

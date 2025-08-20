@@ -7,10 +7,10 @@ import numpy as np
 import cv2
 
 # ==== CONFIGURATION ====
-PRODUCTS_DIR = "/content/drive/MyDrive/Retail AI/Products-png"        
-BACKGROUNDS_DIR = "/content/drive/MyDrive/Retail AI/ScaledBackgrounds"  
-OUTPUT_DIR = "/content/dataset"
-NUM_IMAGES = 2000                 
+PRODUCTS_DIR = "../products"  # Directory containing product images organized by class
+BACKGROUNDS_DIR = "../backgrounds"  
+OUTPUT_DIR = "seg_out"
+NUM_IMAGES = 20                
 MIN_PRODUCTS_PER_IMAGE = 1      
 MAX_PRODUCTS_PER_IMAGE = 5       
 
@@ -62,17 +62,14 @@ def mask_to_polygon(mask, simplify_tolerance=2.0):
     Convert binary mask to polygon coordinates
     Returns list of (x, y) coordinates for YOLO segmentation format
     """
-    # Find contours
     mask_uint8 = mask.astype(np.uint8) * 255
     contours, _ = cv2.findContours(mask_uint8, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
     if not contours:
         return None
     
-    # Get the largest contour (main object)
     largest_contour = max(contours, key=cv2.contourArea)
     
-    # Simplify contour to reduce points
     epsilon = simplify_tolerance
     simplified_contour = cv2.approxPolyDP(largest_contour, epsilon, True)
     

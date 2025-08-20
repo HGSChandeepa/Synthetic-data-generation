@@ -32,6 +32,8 @@ This tool is designed to solve a critical challenge in computer vision developme
 
 ## Sample Workflow
 
+## For Object Detection
+
 ### Input
 
 #### Background Image
@@ -46,6 +48,10 @@ This tool is designed to solve a critical challenge in computer vision developme
 ### Output
 
 ![Result Sample](images/visualized_87_image_0061.jpg)
+
+## For Image Segmentation
+
+![Result Sample](images/viz_06_image_0001.jpg)
 
 ## Setup
 

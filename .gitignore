@@ -6,3 +6,6 @@ products/*
 !products/.gitkeep
 dataset/images
 visualization
+
+segmentation/validation_output
+segmentation/seg_out
