@@ -4,6 +4,10 @@
 
 This repository contains tools for generating synthetic images by combining objects with various backgrounds to create diverse datasets for machine learning training.
 - **⚠️ Make sure to adjust the image scaling to match the background image sizes.**
+```python
+scale_factor = random.uniform(0.35, 0.55)
+
+```
 
 ## Project Overview
 
